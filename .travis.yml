@@ -6,4 +6,6 @@ deploy:
   api_key:
     secure: "d591d763-0d89-4dcc-861f-c3c0325afc42"
   app: best-practices-mindset
-  run: "npm run build"
+  run:
+    - "npm install"
+    - "npm run build"
