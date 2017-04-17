@@ -1,11 +1,11 @@
 language: node_js
 node_js:
   - "6"
+before_deploy:
+  - "npm run build"
+  - "cd dist"
 deploy:
   provider: heroku
   api_key:
     secure: "d591d763-0d89-4dcc-861f-c3c0325afc42"
   app: best-practices-mindset
-  run:
-    - "npm install"
-    - "npm run build"
